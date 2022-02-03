@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Calculator app</title>
+  </head>
+  <body>
+    <main class="container">
+      <img src="./images/logo.svg" alt="Splitter logo" id="logo" />
+      <div class="main-container">
+        <div class="container-1">
+          <div class="bill-container">
+            <div class="people-flex">
+            <p class="bill">Bill</p>
+            <span id="error">Can't be zero</span></span>
+            </div>
+            <div class="input-icons">
+              <img src="./images/icon-dollar.svg" alt="Dollar" class="icon" />
+              <input type="number" min="0" name="dollar" id="rupee" class="input-field" placeholder="0"  />
+            </div>
+          </div>
+          <div class="tips">
+           
+              <p class="bill">Select Tip %</p>
+             
+              <form id="mainForm" name="mainForm">
+            <input type="radio" id="5%" name="radiotip" value="5" />
+            <label for="5%">5%</label>
+            <input type="radio" id="10%" name="radiotip" value="10" />
+            <label for="10%">10%</label>
+            <input type="radio" id="15%" name="radiotip" value="15" />
+            <label for="15%">15%</label>
+            <input type="radio" id="25%" name="radiotip" value="25" />
+            <label for="25%">25%</label>
+            <input type="radio" id="30%" name="radiotip" value="30" />
+            <label for="30%">30%</label>
+            <input type="number" min="0" name="custom" id="custom" class="custom-input" placeholder="Custom" />
+            </form>
+          
+          </div>
+          <div class="people-container">
+            <div class="people-flex">
+              <p class="bill">Number of People</p>
+              <span id="error1">Can't be zero</span>
+            </div>
+            <div class="input-icons">
+              <img src="./images/icon-person.svg" alt="Person" class="icon" />
+              <input type="number" min="1" name="dollar" id="person" class="input-field" placeholder="0" />
+            </div>
+          </div>
+        </div>
+
+        <div class="total-container">
+          <div class="tip-container">
+            <div class="item-1">
+              <span class="subtitle">Tip Amount <p>/ person</p></span>
+            </div>
+            <div class="item-2" id="tip_amount">$0.00</div>
+          </div>
+
+          <div class="tip-container">
+            <div class="item-1">
+              <span class="subtitle">Total <p>/ person</p></span>
+            </div>
+            <div class="item-2" id="total_amount">$0.00</div>
+          </div>
+
+          <input type="button" value="Reset" class="reset" id="reset"  />
+        </div>
+      </div>
+    </main>
+
+    <div class="attribution"> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="https://github.com/NitiMittal/Calculator-app-frontend.io" target="_blank">Niti Mittal</a>. </div>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

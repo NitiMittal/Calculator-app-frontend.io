@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+:root {
+  --strongCyan: hsl(172, 67%, 45%);
+  --strongCyan1: hsl(172, 67%, 75%);
+  --veryDarkCyan: hsl(183, 100%, 15%);
+  --darkGrayishCyan1: hsl(186, 14%, 43%);
+  --darkGrayishCyan2: hsl(184, 14%, 56%);
+  --lightGrayishCyan1: hsl(185, 41%, 84%);
+  --lightGrayishCyan2: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--lightGrayishCyan1);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo {
+  margin-top: 4rem;
+}
+
+.main-container {
+  background-color: var(--white);
+  width: 100%;
+  height: auto;
+  margin-top: 2rem;
+  border-radius: 20px 20px 0px 0px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bill {
+  font-weight: 700;
+  color: var(--darkGrayishCyan1);
+  font-size: 1rem;
+}
+
+.input-icons img {
+  position: absolute;
+}
+
+.input-icons {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 0.6rem;
+
+  width: 2.4rem;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  display: block;
+  background-color: var(--lightGrayishCyan2);
+  border: 1px solid var(--lightGrayishCyan2);
+  margin-top: 1rem;
+  padding: 0.6rem;
+  outline: none;
+  text-align: right;
+  color: var(--strongCyan);
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.input-field:active,
+.input-field:focus,
+.custom-input:active,
+.custom-input:focus {
+  border: 2px solid var(--strongCyan);
+}
+
+input[type="radio"] {
+  opacity: 0;
+  position: fixed;
+  /* width: 0; */
+}
+
+.tips {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+.tips label {
+  display: inline-block;
+  background-color: var(--veryDarkCyan);
+  padding: 0.5rem;
+  text-align: center;
+  width: 48%;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: 2px solid var(--veryDarkCyan);
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: var(--white);
+}
+.tips label:hover {
+  background-color: var(--strongCyan1);
+  color: var(--veryDarkCyan);
+  border: var(--strongCyan1);
+}
+
+.tips input[type="radio"]:checked + label {
+  background-color: var(--strongCyan);
+  border-color: var(--strongCyan);
+  color: var(--veryDarkCyan);
+}
+
+.custom-input {
+  width: 48%;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: var(--lightGrayishCyan2);
+  border: 1px solid var(--lightGrayishCyan2);
+  color: var(--veryDarkCyan);
+  outline: none;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.people-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+#error,
+#error1 {
+  color: rgb(235, 18, 18);
+  display: none;
+}
+.total-container {
+  background-color: var(--veryDarkCyan);
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  padding: 2rem 2rem 1rem 2rem;
+}
+
+.tip-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.tip-container .item-1 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.tip-container .item-2 {
+  color: var(--strongCyan);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.subtitle p {
+  color: var(--lightGrayishCyan1);
+  font-weight: 300;
+}
+
+.reset {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  background-color: var(--strongCyan);
+  outline: none;
+  border: 1px solid var(--strongCyan);
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 900px) {
+  #logo {
+    margin-top: 2rem;
+    width: 4rem;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 80%;
+    padding-top: 0.6rem;
+  }
+
+  .container-1 {
+    width: 50%;
+    padding: 0px;
+    width: 50%;
+  }
+  .tips label,
+  .custom-input {
+    width: 31%;
+  }
+  .custom-input {
+    padding: 0.3rem;
+  }
+  .people-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .total-container {
+    width: 50%;
+    height: 370px;
+    margin-left: 2rem;
+  }
+}
