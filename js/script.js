@@ -4,6 +4,8 @@ let custom = document.getElementById("custom");
 let tip_amount = document.getElementById("tip_amount");
 let total_amount = document.getElementById("total_amount");
 let reset = document.getElementById("reset");
+let radioButtonArray = document.getElementsByName("radiotip");
+let mainForm = document.getElementById("mainForm");
 let error = document.getElementById("error");
 let error1 = document.getElementById("error1");
 
@@ -37,17 +39,26 @@ custom.addEventListener("input", () => {
   if (custom.value >= 0) {
     clearRadioButtons();
     tip_value = custom.value;
-    calculate();
+    setTimeout(() => calculate(), 1000);
   }
 });
 
-// get value of radio button
-document.mainForm.onclick = () => {
-  tip_value = document.mainForm.radiotip.value;
-};
+//get value of radio button
+mainForm.addEventListener("change", () => {
+  for (var i = 0; i < radioButtonArray.length; i++) {
+    if (custom.value > 0 || custom.value == "") {
+      custom.value = "";
+      if (radioButtonArray[i].checked) {
+        tip_value = radioButtonArray[i].value;
+        calculate();
+        break;
+      }
+    }
+  }
+});
 
 const calculate = () => {
-  if (amt > 0 && ppl > 0) {
+  if (amt > 0 && ppl > 0 && tip_value >= 0) {
     let total_tip = (amt * Number(tip_value)) / 100;
     let total_amount1 = total_tip + amt;
     let tip_per_person = total_tip / ppl;
@@ -70,7 +81,6 @@ reset.addEventListener("click", () => {
 });
 
 const clearRadioButtons = () => {
-  let radioButtonArray = document.getElementsByName("radiotip");
   for (let i = 0; i < radioButtonArray.length; i++) {
     let radioButton = radioButtonArray[i];
     radioButton.checked = false;

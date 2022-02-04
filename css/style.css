@@ -75,7 +75,7 @@ body {
   padding: 0.6rem;
   outline: none;
   text-align: right;
-  color: var(--strongCyan);
+  color: var(--veryDarkCyan);
   font-weight: 700;
   font-size: 1.3rem;
 }
@@ -188,6 +188,11 @@ input[type="radio"] {
   font-weight: 700;
   cursor: pointer;
 }
+
+.reset:hover {
+  background-color: var(--strongCyan1);
+  border-color: var(--strongCyan1);
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -197,6 +202,10 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+::placeholder {
+  color: var(--darkGrayishCyan1);
 }
 .attribution {
   font-size: 11px;
@@ -216,8 +225,10 @@ input[type="number"] {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 80%;
+    width: 800px;
     padding-top: 0.6rem;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px #888888;
   }
 
   .container-1 {
